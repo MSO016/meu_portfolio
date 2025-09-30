@@ -31,8 +31,13 @@ Este projeto foi desenvolvido para apresentar minhas habilidades e projetos de f
 Abra o arquivo index.html no navegador.
 
 📬 Contato
+
 👤 Mateus Oliveira
+
 🔗 LinkedIn: https://www.linkedin.com/in/oliveiramateussilva/
+
 💻 GitHub: https://github.com/MSO016
+
 📧 Email: mateussocontato@gmail.com
+
 
