@@ -23,16 +23,6 @@ Este projeto foi desenvolvido para apresentar minhas habilidades e projetos de f
 
 ---
 
-## 📂 Estrutura do Projeto
-
-/
-├── index.html # Estrutura principal
-├── style.css # Estilos e responsividade
-├── script.js # Interatividade e animações
-└── assets/ # Imagens, ícones e recursos
-
----
-
 ## 🔧 Como Executar Localmente
 
 1. Clone este repositório:
