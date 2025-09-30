@@ -4,6 +4,8 @@ Bem-vindo ao meu **Portfólio Interativo**!
 Este projeto foi desenvolvido para apresentar minhas habilidades e projetos de forma criativa, utilizando **efeito parallax**, **cards animados** e um design limpo e responsivo.  
 
 ---
+![Tela Principal] https://github.com/MSO016/meu_portfolio/issues/1#issue-3467718496
+---
 
 ## 🚀 Tecnologias Utilizadas
 
