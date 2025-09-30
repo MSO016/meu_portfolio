@@ -4,7 +4,8 @@ Bem-vindo ao meu **Portfólio Interativo**!
 Este projeto foi desenvolvido para apresentar minhas habilidades e projetos de forma criativa, utilizando **efeito parallax**, **cards animados** e um design limpo e responsivo.  
 
 ---
-![Tela Principal] https://github.com/MSO016/meu_portfolio/issues/1#issue-3467718496
+![Tela Principal] 
+https://private-user-images.githubusercontent.com/210946708/495518220-72fc9e78-d41d-48c3-af0a-a9c5b49a67f3.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTkyMTI3NzksIm5iZiI6MTc1OTIxMjQ3OSwicGF0aCI6Ii8yMTA5NDY3MDgvNDk1NTE4MjIwLTcyZmM5ZTc4LWQ0MWQtNDhjMy1hZjBhLWE5YzViNDlhNjdmMy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwOTMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDkzMFQwNjA3NTlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1kM2E1NmFiNjNkN2M5NjViN2MzNDkyNTkyYjU4NzllNzY5ZTVjZDdmYjdlMmVhMTYyY2UxODViOWMyNDY0MGM1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.qWXC_DXA3TlMeHzK3mf1hd7lSnvp0hShzs6M_QgotPw
 ---
 
 ## 🚀 Tecnologias Utilizadas
