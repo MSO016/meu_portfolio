@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Compras PHP Simulada</title>
+    <link rel="stylesheet" href="../css/style-php.css">
+</head>
+<body class="tema-php">
+
+<header class="php-header">
+    <h1>Lista de Compras Interativa (PHP Simulado)</h1>
+    <p>Exemplo de CRUD de produtos com carrinho, categorias e lojas</p>
+    <a href="../index.html" class="btn-home-php">Home</a>
+</header>
+
+<main class="container">
+
+    <div class="php-card">
+        <button class="php-button" onclick="limparLista()">Limpar Lista</button>
+    </div>
+
+
+    <!-- Seção de produtos -->
+    <div class="php-card">
+        <h2>1. Lista de Produtos</h2>
+        <div class="php-lista-container">
+            <ul class="php-lista">
+                <li>
+                    <div class="item-info">
+                        <strong>Arroz Integral</strong>
+                        <span>Categoria: Comida | Loja: Carrefour</span>
+                    </div>
+                    <div class="item-quantidade">2 kg</div>
+                    <div class="item-actions">
+                        <button class="editar php-button">Editar</button>
+                        <button class="excluir php-button">Excluir</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-info">
+                        <strong>Teclado Mecânico</strong>
+                        <span>Categoria: Tecnologia | Loja: Amazon</span>
+                    </div>
+                    <div class="item-quantidade">1 unidade</div>
+                    <div class="item-actions">
+                        <button class="editar php-button">Editar</button>
+                        <button class="excluir php-button">Excluir</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Adicionar novo produto -->
+    <div class="php-card">
+        <h2>2. Adicionar Produto</h2>
+        <input type="text" id="produtoNome" class="php-input" placeholder="Nome do produto">
+        <input type="number" id="produtoQtd" class="php-input" placeholder="Quantidade">
+        <input type="text" id="produtoCat" class="php-input" placeholder="Categoria (Ex: Comida, Tech)">
+        <input type="text" id="produtoLoja" class="php-input" placeholder="Loja">
+        <button class="php-button" onclick="adicionarProduto()">Adicionar Produto</button>
+        <div class="php-console" id="consoleAdd"></div>
+    </div>
+
+    <!-- Carrinho -->
+    <div class="php-card">
+        <h2>3. Carrinho</h2>
+        <div id="carrinho"></div>
+        <button class="php-button" onclick="limparCarrinho()">Limpar Carrinho</button>
+    </div>
+
+    <!-- Explicação -->
+    <div class="php-card">
+        <h2>4. Como Funciona</h2>
+        <p>Este projeto simula um CRUD de produtos utilizando apenas JS no navegador, mas segue a lógica de um sistema PHP com banco de dados:</p>
+        <ul>
+            <li><b>Create:</b> Adicionar novos produtos à lista.</li>
+            <li><b>Read:</b> Exibir produtos e carrinho.</li>
+            <li><b>Update:</b> Alterar quantidade ou detalhes (simulado ao re-adicionar).</li>
+            <li><b>Delete:</b> Remover produtos da lista ou do carrinho.</li>
+        </ul>
+        <p>Permite testar interatividade, categorias, lojas e quantidade, exatamente como um CRUD real.</p>
+    </div>
+
+</main>
+
+<script src="../js/php.js"></script>
+
+<button class="btn-topo" onclick="subirTopo()">↑ Topo</button>
+
+</body>
+</html>

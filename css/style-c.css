@@ -1,0 +1,151 @@
+/* ========================
+   Layout do Projeto C - Versão Leve
+======================== */
+
+/* Geral da página */
+body {
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, #4a90e2, #007bff);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin-bottom: 5px;
+    font-size: 1.8em;
+}
+
+/* Container principal */
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+/* Cartões de conteúdo */
+.card {
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    color: white;
+}
+
+.card h2 {
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+/* Código */
+pre {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 8px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-size: 0.9em;
+}
+
+/* Inputs e botões */
+input, button {
+    padding: 6px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    cursor: pointer;
+    background-color: #ffd700;
+    color: black;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #e6c200;
+    transform: translateY(-1px);
+}
+
+/* Consoles falsos */
+.fake-console {
+    font-family: monospace;
+    padding: 8px;
+    margin-top: 8px;
+    border-radius: 5px;
+    white-space: pre-line;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+/* Consoles temáticos */
+.fake-console.sucesso {
+    background-color: #e6ffed;
+    border: 1px solid #28a745;
+    color: #155724;
+}
+
+.fake-console.erro {
+    background-color: #ffe6e6;
+    border: 1px solid #dc3545;
+    color: #721c24;
+}
+
+.fake-console.info {
+    background-color: #e6f7ff;
+    border: 1px solid #17a2b8;
+    color: #0c5460;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .card-body {
+        flex-direction: column;
+    }
+}
+/* Tema C */
+.btn-home-c {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 10px 0;
+    background-color: #ffd700; /* dourado */
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-home-c:hover {
+    background-color: #e6c200;
+    transform: translateY(-2px);
+}
+
+.btn-topo-c {
+    position: fixed;
+    bottom: 30px;
+    right: 30px; /* lado direito */
+    padding: 10px 15px;
+    background-color: #4a90e2; /* cor C */
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 1000;
+}
+
+.btn-topo-c:hover {
+    background-color: #2d6bb8;
+    transform: translateY(-2px);
+}

@@ -1,0 +1,203 @@
+/* ========================
+   Layout do PHP
+======================== */
+.php-header {
+    background: linear-gradient(135deg, #8892be, #f0db4f);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    border-bottom: 4px solid #f0db4f;
+}
+
+.php-header h1 {
+    margin-bottom: 5px;
+    font-family: 'Courier New', monospace;
+    font-size: 2rem;
+}
+
+.php-card {
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(145deg, #fffdf5, #f9f9f2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    transition: transform 0.3s ease;
+}
+
+.php-card:hover {
+    transform: translateY(-5px);
+}
+
+.php-card h2 {
+    color: #4f5b93;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.php-console {
+    font-family: 'Courier New', monospace;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+    white-space: pre-line;
+    background-color: #fdf9e3;
+    border-left: 5px solid #f0db4f;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.php-input {
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.php-button {
+    cursor: pointer;
+    border: none;
+    background-color: #4f5b93;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.php-button:hover {
+    background-color: #3b4470;
+    transform: translateY(-2px);
+}
+
+.btn-home-php {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 10px 0;
+    background-color: #fdf9e3;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-home-php:hover {
+    background-color: #f5f2d7;
+    transform: translateY(-2px);
+}
+
+/* ========================
+   Estilo Lista - PHP
+======================== */
+.php-lista-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.php-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.php-lista li {
+    background: linear-gradient(135deg, #fffdf5, #f9f9f2);
+    border-left: 5px solid #f0db4f;
+    margin-bottom: 10px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.php-lista li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.php-lista li .item-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.php-lista li .item-info span {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.php-lista li .item-quantidade {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #4f5b93;
+}
+
+.php-lista li .item-actions button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.php-lista li .item-actions button.editar {
+    background-color: #4f5b93;
+    color: white;
+}
+
+.php-lista li .item-actions button.editar:hover {
+    background-color: #3b4470;
+}
+
+.php-lista li .item-actions button.excluir {
+    background-color: #f0db4f;
+    color: black;
+}
+
+.php-lista li .item-actions button.excluir:hover {
+    background-color: #e6c847;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .php-card {
+        padding: 15px;
+    }
+    .php-header h1 {
+        font-size: 1.5rem;
+    }
+    .php-lista li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.btn-topo {
+    position: fixed;
+    bottom: 30px; /* distância do rodapé */
+    right: 30px;   /* distância da borda esquerda */
+    padding: 10px 15px;
+    background-color: #4f5b93; /* cor PHP */
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 1000; /* garante que fique sobre outros elementos */
+}
+
+.btn-topo:hover {
+    background-color: #3b4470;
+    transform: translateY(-2px);
+}

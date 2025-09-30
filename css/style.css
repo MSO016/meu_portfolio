@@ -1,0 +1,213 @@
+/* ===================
+   RESET BÁSICO
+=================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ===================
+   HERO / PARALLAX
+=================== */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Camadas parallax */
+.layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateZ(0);
+  will-change: transform;
+  pointer-events: none;
+}
+
+.sky {
+  background: linear-gradient(to top, #1e3c72, #2a5298);
+  z-index: 1;
+}
+
+.sun {
+  background: radial-gradient(circle at 80% 20%, #ffdd55, #ff9900 40%, transparent 60%);
+  z-index: 2;
+  mix-blend-mode: screen;
+}
+
+.clouds {
+  background: radial-gradient(circle at 20% 40%, #ffffffaa, transparent 30%),
+              radial-gradient(circle at 60% 30%, #ffffff99, transparent 25%),
+              radial-gradient(circle at 80% 50%, #ffffff88, transparent 20%);
+  z-index: 3;
+}
+
+.mountains {
+  background: linear-gradient(to top, #2c3e50, transparent 40%),
+              linear-gradient(to top, #34495e, transparent 60%),
+              linear-gradient(to top, #2c3e50, transparent 80%);
+  z-index: 4;
+}
+
+/* ===================
+   HERO CONTENT
+=================== */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+.hero-content .botoes-apresentacao {
+  margin-top: 20px;
+}
+
+/* ===================
+   BOTÕES
+=================== */
+.btn-home-c {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 5px;
+  background-color: #ffd700;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-home-c:hover {
+  background-color: #e6c200;
+  transform: translateY(-2px);
+}
+
+.btn-topo-c {
+  display: inline-block;
+  padding: 10px 15px;
+  margin-top: 20px;
+  background-color: #4a90e2;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-topo-c:hover {
+  background-color: #2d6bb8;
+  transform: translateY(-2px);
+}
+
+.btn-card {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #4a90e2;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-card:hover {
+  background-color: #2d6bb8;
+}
+
+/* ===================
+   CARDS INTEGRADOS
+=================== */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 10;
+  margin-top: 450px;
+  padding-bottom: 50px;
+}
+
+.card-box {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.6);
+}
+
+.card-box h3 {
+  color: #ffd700;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card-box p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* ===================
+   FOOTER
+=================== */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+/* ===================
+   RESPONSIVIDADE
+=================== */
+@media screen and (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-box {
+    width: 90%;
+  }
+}

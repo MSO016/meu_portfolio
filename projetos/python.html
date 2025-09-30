@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Python - Meu Portfólio</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="../css/style-python.css">
+</head>
+<body>
+
+<!-- ========================
+   Layout do Header Python
+======================== -->
+<header class="python-header">
+    <h1>Projeto Python</h1>
+    <p>Conversor de Moeda com interface interativa</p>
+    <a href="../index.html" class="btn-home-python">Home</a>
+</header>
+
+<main class="container">
+
+    <!-- ========================
+       Exemplo 1: Código Python
+    ======================== -->
+    <div class="python-card">
+        <h2>1. Código em Python</h2>
+        <pre>
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+# Conversor de moeda fixo
+TAXA_USD = 5.20
+TAXA_EUR = 5.50
+TAXA_GBP = 6.00
+
+def converter_moeda(valor_brl, moeda):
+    if moeda == 'usd': return valor_brl / TAXA_USD, "USD"
+    elif moeda == 'eur': return valor_brl / TAXA_EUR, "EUR"
+    elif moeda == 'gbp': return valor_brl / TAXA_GBP, "GBP"
+    return None, None
+        </pre>
+        <p>Função para conversão de moeda usando taxas fixas.</p>
+    </div>
+
+    <!-- ========================
+       Exemplo 2: Interface HTML
+    ======================== -->
+    <div class="python-card">
+        <h2>2. Interface HTML</h2>
+        <p>Campos para entrada do valor e seleção de moeda.</p>
+        <input id="valor" class="python-input" type="number" placeholder="Digite o valor em R$">
+        <select id="moeda" class="python-input">
+            <option value="usd">USD</option>
+            <option value="eur">EUR</option>
+            <option value="gbp">GBP</option>
+        </select>
+        <button class="python-button" onclick="converterMoeda()">Converter</button>
+        <div class="python-console mt-3" id="consolePython">Resultado aparecerá aqui...</div>
+    </div>
+
+    <!-- ========================
+       Exemplo 3: Script JavaScript
+    ======================== -->
+    <div class="python-card">
+        <h2>3. Função JavaScript</h2>
+        <p>Simulação do comportamento Python na web.</p>
+        <pre>
+function converterMoeda() {
+    let valor = parseFloat(document.getElementById("valor").value);
+    let moeda = document.getElementById("moeda").value;
+
+    if (!valor) { alert("Digite um valor válido"); return; }
+
+    const taxas = { usd: 5.20, eur: 5.50, gbp: 6.00 };
+    let resultado = (valor / taxas[moeda]).toFixed(2);
+
+    document.getElementById("consolePython").textContent =
+        `R$ ${valor} = ${resultado} ${moeda.toUpperCase()}`;
+}
+        </pre>
+        <button class="python-button" onclick="converterMoeda()">Testar Conversão</button>
+    </div>
+
+</main>
+
+<script src="../js/python.js"></script>
+
+<button class="btn-topo-python" onclick="subirTopoPython()">↑ Topo</button>
+
+</body>
+</html>

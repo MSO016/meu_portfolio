@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto C - Blog Interativo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style-c.css">
+</head>
+<body class="tema-c">
+
+<!-- ========================
+     Cabeçalho
+======================== -->
+<header>
+    <h1>Pagina Interativa: Gerenciador de Pilha em C</h1>
+    <p>Do básico ao avançado com explicações e consoles simulados</p>
+    <a href="../index.html" class="btn-home-c">Home</a>
+</header>
+
+<!-- ========================
+     Conteúdo Principal
+======================== -->
+<main class="container">
+
+    <!-- Exemplo 1: Estrutura da Pilha -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-body row">
+            <!-- Código -->
+            <div class="col-md-6">
+                <h2>1. Estrutura da Pilha</h2>
+                <pre>
+struct Relatorio {
+    int id;
+    char titulo[50];
+    char data[20];
+    struct Relatorio *prox;
+};
+                </pre>
+                <p>Definição básica da estrutura Relatorio, essencial para organizar uma pilha em C.</p>
+            </div>
+            <!-- Resultado -->
+            <div class="col-md-6">
+                <h2>Resultado</h2>
+                <div class="fake-console" id="console0">Pilha inicial vazia.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Exemplo 2: Push Básico -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-body row">
+            <!-- Código -->
+            <div class="col-md-6">
+                <h2>2. Push Básico</h2>
+                <pre>
+void push_relatorio(const char *titulo, const char *data) {
+    struct Relatorio *novo_relatorio = malloc(sizeof(struct Relatorio));
+    strncpy(novo_relatorio->titulo, titulo, 49);
+    strncpy(novo_relatorio->data, data, 19);
+    novo_relatorio->id = proximo_id++;
+    novo_relatorio->prox = topo;
+    topo = novo_relatorio;
+}
+                </pre>
+                <p>Função simples para adicionar um novo relatório à pilha.</p>
+            </div>
+            <!-- Interface -->
+            <div class="col-md-6">
+                <h2>Teste Push</h2>
+                <input id="titulo" class="form-control mb-2" placeholder="Título">
+                <input id="data" type="date" class="form-control mb-2" placeholder="Data (DD/MM/AAAA)">
+                <button class="btn btn-primary" onclick="pushRelatorio()">Adicionar Relatório</button>
+                <div class="fake-console" id="console1"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Exemplo 3: Pop -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-body row">
+            <div class="col-md-6">
+                <h2>3. Pop Básico</h2>
+                <pre>
+void pop_relatorio() {
+    if (!topo) return;
+    struct Relatorio *temp = topo;
+    topo = topo->prox;
+    free(temp);
+}
+                </pre>
+                <p>Remove o último relatório inserido, liberando memória.</p>
+            </div>
+            <div class="col-md-6">
+                <h2>Teste Pop</h2>
+                <button class="btn btn-danger" onclick="popRelatorio()">Remover Último Relatório</button>
+                <div class="fake-console" id="console2"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Exemplo 4: Listar -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-body row">
+            <div class="col-md-6">
+                <h2>4. Listar Relatórios</h2>
+                <pre>
+const char* listar_relatorios() {
+    static char buffer[4096];
+    buffer[0] = '\0';
+    struct Relatorio *atual = topo;
+    while (atual) {
+        snprintf(linha, sizeof(linha), "ID: %d | Titulo: %s | Data: %s\n", atual->id, atual->titulo, atual->data);
+        strncat(buffer, linha, sizeof(buffer) - strlen(buffer) - 1);
+        atual = atual->prox;
+    }
+    return buffer;
+}
+                </pre>
+                <p>Gera uma listagem completa de todos os relatórios presentes na pilha.</p>
+            </div>
+            <div class="col-md-6">
+                <h2>Lista Atual</h2>
+                <pre id="lista" class="fake-console"></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Exemplo 5: Peek -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-body row">
+            <div class="col-md-6">
+                <h2>5. Peek — Verificar Topo</h2>
+                <pre>
+struct Relatorio* peek() {
+    return topo;
+}
+                </pre>
+                <p>Função para visualizar o relatório no topo da pilha sem removê-lo.</p>
+            </div>
+            <div class="col-md-6">
+                <h2>Teste Peek</h2>
+                <button class="btn btn-info" onclick="peekRelatorio()">Ver Topo</button>
+                <div class="fake-console" id="console5"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Exemplo 6: Contador -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-body row">
+            <div class="col-md-6">
+                <h2>6. Contador de Relatórios</h2>
+                <pre>
+int contar() {
+    int contador = 0;
+    struct Relatorio* atual = topo;
+    while (atual) {
+        contador++;
+        atual = atual->prox;
+    }
+    return contador;
+}
+                </pre>
+                <p>Função para contar quantos relatórios estão na pilha.</p>
+            </div>
+            <div class="col-md-6">
+                <h2>Teste Contador</h2>
+                <button class="btn btn-warning" onclick="contarRelatorios()">Contar Relatórios</button>
+                <div class="fake-console" id="console6"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Exemplo 7: Buscar -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-body row">
+            <div class="col-md-6">
+                <h2>7. Buscar por Título</h2>
+                <pre>
+struct Relatorio* buscar(const char* titulo) {
+    struct Relatorio* atual = topo;
+    while (atual) {
+        if (strcmp(atual->titulo, titulo) == 0) {
+            return atual;
+        }
+        atual = atual->prox;
+    }
+    return NULL;
+}
+                </pre>
+                <p>Busca um relatório pelo título, retornando o primeiro encontrado.</p>
+            </div>
+            <div class="col-md-6">
+                <h2>Teste Buscar</h2>
+                <input id="tituloBusca" class="form-control mb-2" placeholder="Título a buscar">
+                <button class="btn btn-secondary" onclick="buscarRelatorio()">Buscar</button>
+                <div class="fake-console" id="console7"></div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<!-- JS específico -->
+<script src="../js/c.js"></script>
+
+<button class="btn-topo-c" onclick="subirTopoC()">↑ Topo</button>
+
+</body>
+</html>
