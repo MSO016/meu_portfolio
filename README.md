@@ -7,6 +7,9 @@ Este projeto foi desenvolvido para apresentar minhas habilidades e projetos de f
 
 ✨ [Meu Portfólio](https://meu-portfolio-ebon-rho.vercel.app/index.html) ✨
 
+[![Portfólio](https://img.shields.io/badge/Portfólio-Visite%20aqui-blue?style=for-the-badge&logo=github)](https://meu-portfolio-ebon-rho.vercel.app/index.html)
+
+
 ---
 
 <p align="center">
