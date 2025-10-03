@@ -7,9 +7,19 @@ window.addEventListener('scroll', function () {
     const clouds = document.querySelector('.clouds');
     const mountains = document.querySelector('.mountains');
 
-    // Movimento suave
-    sky.style.transform = `translateY(${scrolled * 0.1}px)`;
-    sun.style.transform = `translateY(${scrolled * 0.2}px)`;
-    clouds.style.transform = `translateY(${scrolled * 0.3}px)`;
-    mountains.style.transform = `translateY(${scrolled * 0.5}px)`;
+    // Multiplicadores normais
+    let mSky = 0.1, mSun = 0.2, mClouds = 0.3, mMountains = 0.5;
+
+    // Em mobile, suaviza o efeito
+    if (window.innerWidth < 768) {
+        mSky = 0.05;
+        mSun = 0.1;
+        mClouds = 0.15;
+        mMountains = 0.25;
+    }
+
+    sky.style.transform = `translateY(${scrolled * mSky}px)`;
+    sun.style.transform = `translateY(${scrolled * mSun}px)`;
+    clouds.style.transform = `translateY(${scrolled * mClouds}px)`;
+    mountains.style.transform = `translateY(${scrolled * mMountains}px)`;
 });

@@ -19,11 +19,13 @@ body, html {
 =================== */
 .hero {
   position: relative;
-  height: 100vh;
+  min-height: 100vh; /* agora cresce conforme o conteúdo */
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/* Camadas parallax */
 .layer {
   position: absolute;
   width: 100%;
@@ -73,13 +75,13 @@ body, html {
 }
 
 .hero-content h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 10px;
   text-shadow: 0 4px 10px rgba(0,0,0,0.6);
 }
 
 .hero-content p {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   text-shadow: 0 2px 6px rgba(0,0,0,0.5);
 }
 
@@ -107,23 +109,6 @@ body, html {
   transform: translateY(-2px);
 }
 
-.btn-topo-c {
-  display: inline-block;
-  padding: 10px 15px;
-  margin-top: 20px;
-  background-color: #4a90e2;
-  color: white;
-  font-weight: bold;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn-topo-c:hover {
-  background-color: #2d6bb8;
-  transform: translateY(-2px);
-}
-
 .btn-card {
   display: inline-block;
   padding: 10px 15px;
@@ -148,7 +133,16 @@ body, html {
   flex-wrap: wrap;
   position: relative;
   z-index: 10;
-  margin-top: 450px;
+  .cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 10;
+  margin: 60px auto 40px auto; /* afasta dos botões e do footer */
+  padding: 20px;
+}
   padding-bottom: 50px;
 }
 
@@ -158,6 +152,7 @@ body, html {
   padding: 20px;
   border-radius: 12px;
   width: 300px;
+  max-width: 90%;
   text-align: center;
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -193,18 +188,26 @@ footer {
 /* ===================
    RESPONSIVIDADE
 =================== */
-@media screen and (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2rem;
+@media screen and (max-width: 992px) {
+  .cards-container {
+    margin-top: 40px; /* menos espaço para não sumir */
   }
+  .card-box {
+    width: 45%; /* dois por linha */
+  }
+}
 
-  .hero-content p {
-    font-size: 1rem;
+@media screen and (max-width: 768px) {
+  .hero-content {
+    top: auto;
+    transform: none;
+    margin-top: 80px;
   }
 
   .cards-container {
     flex-direction: column;
     align-items: center;
+    margin-top: 30px;
   }
 
   .card-box {

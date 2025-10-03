@@ -172,13 +172,43 @@
 @media (max-width: 768px) {
     .php-card {
         padding: 15px;
+        margin: 15px 10px;
     }
+    
     .php-header h1 {
         font-size: 1.5rem;
+        
     }
+
     .php-lista li {
         flex-direction: column;
         align-items: flex-start;
+        gap: 10px;
+    }
+
+     .php-lista li .item-actions {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+
+    .php-input {
+        font-size: 0.9rem;
+    }
+
+    .php-button {
+        width: 100%; /* botões ocupam a linha toda no mobile */
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .php-header h1 {
+        font-size: 1.2rem;
+    }
+    .php-card h2 {
+        font-size: 1rem;
     }
 }
 
