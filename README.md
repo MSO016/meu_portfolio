@@ -4,6 +4,11 @@ Bem-vindo ao meu **Portfólio Interativo**!
 Este projeto foi desenvolvido para apresentar minhas habilidades e projetos de forma criativa, utilizando **efeito parallax**, **cards animados** e um design limpo e responsivo.  
 
 ---
+
+## 🌐 Confira meu [Portfólio]([https://seudominio.com](https://meu-portfolio-ebon-rho.vercel.app/index.html))
+
+---
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/72fc9e78-d41d-48c3-af0a-a9c5b49a67f3" alt="Print da tela principal" width="800">
 </p>
