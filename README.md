@@ -5,7 +5,9 @@ Este projeto foi desenvolvido para apresentar minhas habilidades e projetos de f
 
 ---
 
-## 🌐 Confira meu [Portfólio]([https://meu-portfolio-ebon-rho.vercel.app/index.html])
+<a href="https://meu-portfolio-ebon-rho.vercel.app/index.html" target="_blank">
+  <img src="https://img.shields.io/badge/Acessar-Portfólio-orange?style=for-the-badge">
+</a>
 
 ---
 
