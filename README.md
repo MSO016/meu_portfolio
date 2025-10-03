@@ -5,7 +5,7 @@ Este projeto foi desenvolvido para apresentar minhas habilidades e projetos de f
 
 ---
 
-## 🌐 Confira meu [Portfólio]([https://seudominio.com](https://meu-portfolio-ebon-rho.vercel.app/index.html))
+## 🌐 Confira meu [Portfólio]([https://meu-portfolio-ebon-rho.vercel.app/index.html])
 
 ---
 
